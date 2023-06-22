@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pop-up Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+
+    <div class="map-icon">
+        <i class="fas fa-map-marker-alt"></i>
+    </div>
+
+    <main class="popup-card hidden">
+        <div class="card-container">
+            <div class="close-icon"><i class="fas fa-times"></i></div>
+            <div class="left-section"></div>
+            <div class="right-section">
+                <section class="section-1">
+                    <div id="map"></div>
+                </section>
+                <section class="section-2">
+                    <span id="overview-link" class="conts overview-link">Overview</span>
+                    <span class="conts">Travel Time</span>
+                    <span class="conts">Groceries</span>
+                    <span class="conts">Transit</span>
+                    <span class="conts">Restaurants</span>
+                    <span class="conts">Schools</span>
+                </section>
+                <section class="section-3">
+                    <span class="box"><i class="fas fa-walking"></i></span>
+                    <span class="box"><i class="fas fa-car"></i></span>
+                    <span class="box"><i class="fas fa-bicycle"></i></span>
+                    <span class="box"><i class="fas fa-bus"></i></span>
+                </section>
+                <section class="section-4 hidden">
+                    <input type="text" class="editor" placeholder="Add a destination">
+                </section>
+                <section class="section-5 hidden">
+                    <button class="search-button">Search</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="test.js"></script>
+</body>
+
+</html>
