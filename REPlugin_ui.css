@@ -1,0 +1,496 @@
+.map-icon {
+  position: fixed;
+  top: 19.5%;
+  right: 2%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+
+  font-size: 20px;
+}
+
+.popup-card {
+  position: fixed;
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+  width: 380px;
+  height: 643px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  z-index: 1;
+  transition: right 0.5s;
+  box-shadow: 15px 5px 39px rgba(0, 0, 0, 0.3);
+}
+
+.popup-card.open {
+  right: 30px;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.close-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 4px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.close-icon i {
+  font-size: 34px;
+}
+
+.left-section {
+  float: left;
+  width: 30px;
+  height: 100%;
+  /* padding: 10px; */
+  background-color: black;
+}
+
+.right-section {
+  float: left;
+  width: 350px;
+  height: 100%;
+  background-color: white;
+  /* border: 2px dotted paleturquoise; */
+}
+
+.section {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.nav-tabs::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+  width: 5px;
+}
+
+.nav-tabs::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.nav-tabs::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
+}
+
+.section-3 {
+  position: fixed;
+  width: 189px;
+  height: 32px;
+  left: 52px;
+  margin-top: 43px;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 30px;
+  margin: 2px;
+  background-color: lightgray;
+  border-radius: 10px;
+
+  font-size: 20px;
+}
+
+.box {
+  background-color: #ccc; /* Set the initial background color */
+  color: initial; /* Set the initial text color */
+}
+
+.box.active {
+  background-color: black; /* Set the background color when active */
+  color: white; /* Set the text color when active */
+}
+
+.search {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 22px;
+  margin-top: 20px;
+  flex-shrink: 0;
+}
+
+.section-4 .editor {
+  box-sizing: border-box;
+  width: 300px;
+  height: 40px;
+  left: 0;
+  opacity: 0.5;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+.editor {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: left;
+  font: 400 14px "Avenir", sans-serif;
+}
+
+.section-5 .search-button {
+  box-sizing: border-box;
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  border: 1px solid #0b5e69;
+  border-radius: 4px;
+
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #0b5e69;
+
+  cursor: pointer;
+}
+
+.section-1 #map {
+  width: 350px;
+  height: 259px;
+}
+
+.container {
+  margin-top: 15px;
+  width: auto;
+  height: 369px;
+  /* display: flex;
+  flex-wrap: nowrap; */
+  overflow: hidden;
+  /* border: 2px dotted darkmagenta; */
+}
+
+/* CSS for hiding the white outline on anchor tags */
+.nav-link:focus,
+.nav-link:active,
+.nav-link:hover {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* CSS for changing the text color of the active nav-link */
+.nav-link:hover,
+.nav-link.active {
+  color: black !important;
+  text-decoration: none;
+}
+
+.nav-tabs {
+  position: relative;
+  width: 350px;
+  margin-left: 15px;
+  overflow-x: auto;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.nav-item {
+  /* width: 97px; */
+  height: 34px !important;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+
+  /* background-color: #ccc; */
+  color: #000;
+  text-align: center;
+  margin-right: 3px;
+  border-radius: 10px;
+  /* border: 3px solid dodgerblue; */
+}
+
+.nav-link {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  width: 97px;
+  height: 28px !important;
+  padding: 2.5px 0;
+  color: #000;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  outline: none;
+  outline-style: none;
+  border: none;
+  overflow: hidden;
+}
+
+/* .nav-link:hover::before,
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: translateY(-50%);
+  z-index: -1;
+} */
+
+.nav-link {
+  background-color: #ccc; /*Set the initial background color */
+  color: initial; /*Set the initial text color*/
+}
+.nav-link.active {
+  overflow: hidden;
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.tab-content {
+  width: 350px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.tab-panel {
+  position: relative;
+  display: none;
+  top: 40px;
+  /* border: 1px solid darkgreen; */
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Styling for the dynamically created div */
+.info-container {
+  margin: 20px 0 20px 22px;
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.ellipse {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 0 18px;
+}
+
+.ellipse span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.travel-details {
+  position: relative;
+  width: 250px;
+  height: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.place-title {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.edit i{
+  background-color: transparent;
+  margin-left: 5px;
+  font-size: 12px;
+  color: #000;
+  cursor: pointer;
+}
+
+.travel-details .row2 {
+  display: flex;
+  flex-direction: row;
+  margin-right: 15% !important;
+  margin-bottom: 100px ;
+}
+
+#transit {
+  font-family: "Avenir";
+}
+
+#info-container {
+  margin: 20px 0 20px 22px;
+  padding-left: 25px;
+  padding-top: 10px;
+  width: 300px;
+  height: 78px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+#info-container:hover {
+  border: 1px solid #ccc;
+}
+
+.row1 {
+  margin-left: 2px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.row2 {
+  display: flex;
+  margin-top: 6px;
+}
+
+#transit .tram-stop {
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 10px;
+}
+
+.pic {
+  border-radius: 4.5px;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  margin-right: 10px;
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.grocery-item,
+.restaurant-item,
+.school-item {
+  width: 300px;
+  height: 80px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0 10px 22px;
+}
+
+.grocery-details,
+.restaurant-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grocery-details .place-title{
+  display: flex;
+}
+
+h6 {
+  color: #000;
+  font-size: 14px;
+  font-family: "Avenir";
+  font-weight: 900;
+  line-height: 10px;
+  letter-spacing: 0em;
+}
+
+.rating-stars {
+  margin-left: 20px;
+}
+
+.rating-stars i {
+  font-size: 15px;
+  color: #fed136;
+  margin-right: 2px;
+}
+
+.rating-stars .empty-star {
+  color: #d9d9d9;
+}
+
+.modeInfo{
+  display: flex;
+  flex-direction: row;
+  margin-right: 17% !important;
+  margin-top: 5px !important;
+}
+
+.transit-info {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 1);
+  font-family: "Avenir";
+  line-height: 26px;
+  margin-left: 10px;
+}
+
+.restaurant-details .place-title{
+  display: flex;
+}
+
+.restaurant-details .place-title h6{
+  text-align: left;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+.school-details h6 {
+  margin: 0;
+}

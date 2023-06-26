@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pop-up Card</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+
+    <div class="map-icon">
+        <i class="material-icons">place</i>
+    </div>
+
+    <main class="popup-card hidden">
+        <div class="card-container">
+            <div class="close-icon"><i class="material-icons">close</i></div>
+            <div class="left-section"></div>
+            <div class="right-section">
+                <section class="section-1">
+                    <div id="map"></div>
+                </section>
+                <div class="container">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#overview">Overview</a>
+                            <section class="section-3">
+                                <span class="box box-clickable"><i class="material-icons">directions_walk</i></span>
+                                <span class="box box-clickable"><i class="material-icons">directions_car</i></span>
+                                <span class="box box-clickable"><i class="material-icons">directions_bike</i></span>
+                                <span class="box box-clickable"><i class="material-icons">tram</i></span>
+                            </section>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#t_time">Travel Time</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#groceries">Groceries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#transit">Transit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#rest">Restaurants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#schools">Schools</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-panel fade show active" id="overview">
+                            <section class="search">
+                                <section class="section-4">
+                                    <input type="text" class="editor" placeholder="Add a destination">
+                                </section>
+                                <section class="section-5">
+                                    <button class="search-button">Search</button>
+                                </section>
+                            </section>
+                        </div>
+
+                        <div class="tab-panel fade" id="t_time">
+                            <div class="info-container">
+                                <div class="ellipse">
+                                    <span>A</span>
+                                </div>
+                                <div class="travel-details">
+                                    <div class="place-title">
+                                        <p>Hardbrücke, Zurich, Switzerland Lorem ipsum dolor</p>
+                                        <button class="edit"><i class="material-icons">edit_square</i></button>
+                                    </div>
+                                    <div class="row2">
+                                        <i class="material-icons">directions_car</i>
+                                        <p class="transit-info">By Car <b>0 hours 25 mins</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="search">
+                                <section class="section-4">
+                                    <input type="text" class="editor" placeholder="Add a destination">
+                                </section>
+                                <section class="section-5">
+                                    <button class="search-button">Search</button>
+                                </section>
+                            </section>
+                        </div>
+
+                        <div class="tab-panel fade" id="groceries">
+                            <div class="grocery-item">
+                                <div class="pic">
+                                    <img src="images/pronto.svg" alt="Grocery Image" class="grocery-image">
+                                </div>
+                                <div class="grocery-details">
+                                    <div class="place-title">
+                                        <h6>Coop Pronto</h6>
+                                        <div class="rating-stars">
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars empty-star">star_border</i>
+                                        </div>
+                                    </div>
+                                    <div class="modeInfo">
+                                        <i class="material-icons">directions_car</i>
+                                        <p class="transit-info">By Car <b>0 hours 03 mins</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grocery-item">
+                                <div class="pic">
+                                    <img src="images/coop.png" alt="Grocery Image" class="grocery-image">
+                                </div>
+                                <div class="grocery-details">
+                                    <div class="place-title">
+                                        <h6>Coop</h6>
+                                        <div class="rating-stars">
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars empty-star">star_border</i>
+                                            <i class="material-icons stars empty-star">star_border</i>
+                                        </div>
+                                    </div>
+                                    <div class="modeInfo">
+                                        <i class="material-icons">directions_car</i>
+                                        <p class="transit-info">By Car <b>0 hours 04 mins</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grocery-item">
+                                <div class="pic">
+                                    <img src="images/migros.png" alt="Grocery Image" class="grocery-image">
+                                </div>
+                                <div class="grocery-details">
+                                    <div class="place-title">
+                                        <h6>Migros</h6>
+                                        <div class="rating-stars">
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars empty-star">star_border</i>
+                                        </div>
+                                    </div>
+                                    <div class="modeInfo">
+                                        <i class="material-icons">directions_car</i>
+                                        <p class="transit-info">By Car <b>0 hours 04 mins</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-panel fade" id="transit">
+                            <div id="info-container">
+                                <div class="row1">
+                                    <h6>Hardbrücke <span class="tram-stop">Tram stop</span></h6>
+                                </div>
+                                <div class="row2">
+                                    <i class="material-icons">directions_car</i>
+                                    <span class="transit-info">By Car <b>0 hours 04 mins</b></span>
+                                </div>
+                            </div>
+
+                            <div id="info-container">
+                                <div class="row1">
+                                    <h6>Hardbrücke <span class="tram-stop">Bus stop</span></h6>
+                                </div>
+                                <div class="row2">
+                                    <i class="material-icons">directions_car</i>
+                                    <span class="transit-info">By Car <b>0 hours 05 mins</b></span>
+                                </div>
+                            </div>
+
+                            <div id="info-container">
+                                <div class="row1">
+                                    <h6>Milchbuck <span class="tram-stop">Bus stop</span></h6>
+                                </div>
+                                <div class="row2">
+                                    <i class="material-icons">directions_car</i>
+                                    <span class="transit-info">By Car <b>0 hours 05 mins</b></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-panel fade" id="rest">
+                            <div class="restaurant-item">
+                                <div class="pic">
+                                    <img src="images/sushibar.png" alt="Restaurant Image" class="restaurant-image">
+                                </div>
+                                <div class="restaurant-details">
+                                    <div class="place-title">
+                                        <h6>Sushi Bar</h6>
+                                        <div class="rating-stars">
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars empty-star">star_border</i>
+                                        </div>
+                                    </div>
+                                    <div class="modeInfo">
+                                        <i class="material-icons">directions_car</i>
+                                        <p class="transit-info">By Car <b>0 hours 02 mins</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="restaurant-item">
+                                <div class="pic">
+                                    <img src="images/alfredos.png" alt="Restaurant Image" class="restaurant-image">
+                                </div>
+                                <div class="restaurant-details">
+                                    <div class="place-title">
+                                        <h6>Alfredos</h6>
+                                        <div class="rating-stars">
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars empty-star">star_border</i>
+                                        </div>
+                                    </div>
+                                    <div class="modeInfo">
+                                        <i class="material-icons">directions_car</i>
+                                        <p class="transit-info">By Car <b>0 hours 08 mins</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="restaurant-item">
+                                <div class="pic">
+                                    <img src="images/texmex.png" alt="Restaurant Image" class="restaurant-image">
+                                </div>
+                                <div class="restaurant-details">
+                                    <div class="place-title">
+                                        <h6>TexMex</h6>
+                                        <div class="rating-stars">
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars">star</i>
+                                            <i class="material-icons stars empty-star">star_border</i>
+                                        </div>
+                                    </div>
+                                    <div class="modeInfo">
+                                        <i class="material-icons">directions_car</i>
+                                        <p class="transit-info">By Car <b>0 hours 08 mins</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-panel fade" id="schools">
+                            <div class="school-item">
+                                <div class="pic">
+                                    <img src="images/volkschule.png" alt="School Image" class="school-image">
+                                </div>
+                                <div class="school-details">
+                                    <h6>Volksschule</h6>
+                                    <div class="row2">
+                                        <i class="material-icons">directions_car</i>
+                                        <p class="transit-info">By Car <b>0 hours 05 mins</b></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="school-item">
+                                <div class="pic">
+                                    <img src="images/schule.svg" alt="School Image" class="school-image">
+                                </div>
+                                <div class="school-details">
+                                    <h6>Schule Limmat</h6>
+                                    <div class="row2">
+                                        <i class="material-icons">directions_car</i>
+                                        <p class="transit-info">By Car <b>0 hours 12 mins</b></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="school-item">
+                                <div class="pic">
+                                    <img src="images/schule hard.png" alt="School Image" class="school-image">
+                                </div>
+                                <div class="school-details">
+                                    <h6>Schule Hard</h6>
+                                    <div class="row2">
+                                        <i class="material-icons">directions_car</i>
+                                        <p class="transit-info">By Car <b>0 hours 15 mins</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="test.js"></script>
+</body>
+
+</html>
