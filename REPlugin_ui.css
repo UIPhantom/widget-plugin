@@ -1,3 +1,8 @@
+body{
+  font-family: "Avenir" !important;
+  font: optional "sans-serif";
+}
+
 .map-icon {
   position: fixed;
   top: 19.5%;
@@ -85,24 +90,6 @@
   justify-content: center;
 }
 
-.nav-tabs::-webkit-scrollbar {
-  height: 6px;
-}
-
-.nav-tabs::-webkit-scrollbar-track {
-  background-color: #f3f4f6;
-  width: 5px;
-}
-
-.nav-tabs::-webkit-scrollbar-thumb {
-  background-color: #000000;
-  border-radius: 4px;
-}
-
-.nav-tabs::-webkit-scrollbar-thumb:hover {
-  background-color: #555555;
-}
-
 .section-3 {
   position: fixed;
   width: 189px;
@@ -147,7 +134,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 22px;
-  margin-top: 20px;
+  margin-top: -30px;
   flex-shrink: 0;
 }
 
@@ -164,7 +151,7 @@
 .editor {
   color: rgba(0, 0, 0, 0.5);
   text-align: left;
-  font: 400 14px "Avenir", sans-serif;
+  font: 400 14px "Avenir", "sans-serif";
 }
 
 .section-5 .search-button {
@@ -175,7 +162,7 @@
   border: 1px solid #0b5e69;
   border-radius: 4px;
 
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 12px;
@@ -226,6 +213,24 @@
   user-select: none;
 }
 
+.nav-tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.nav-tabs::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+  width: 5px;
+}
+
+.nav-tabs::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.nav-tabs::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
+}
+
 .nav-item {
   /* width: 97px; */
   height: 34px !important;
@@ -252,24 +257,12 @@
   border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
+  text-align: center;
   outline: none;
   outline-style: none;
   border: none;
   overflow: hidden;
 }
-
-/* .nav-link:hover::before,
-.nav-link.active::before {
-  content: "";
-  position: absolute;
-  top: 28px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  transform: translateY(-50%);
-  z-index: -1;
-} */
 
 .nav-link {
   background-color: #ccc; /*Set the initial background color */
@@ -287,7 +280,26 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
+}
+
+.tab-panel{
+  margin-top: 45px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  width: 350px;
+  height: 300px;
+  overflow-y: auto;
+  /* border: 2px dotted deepskyblue; */
+}
+
+.tab-panel::-webkit-scrollbar {
+  height: 10px;
+}
+
+.tab-panel::-webkit-scrollbar-track,
+.tab-panel::-webkit-scrollbar-thumb {
+  background-color: none;
 }
 
 .tab-panel {
@@ -303,7 +315,7 @@
 
 /* Styling for the dynamically created div */
 .info-container {
-  margin: 20px 0 20px 22px;
+  margin: -25px 0 52px 22px;
   width: 300px;
   height: auto;
   display: flex;
@@ -313,6 +325,10 @@
   box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid black;
+}
+
+.place-title p{
+  width: 150px;
 }
 
 .ellipse {
@@ -340,7 +356,7 @@
   padding-right: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .place-title {
@@ -353,7 +369,7 @@
 
 .edit i{
   background-color: transparent;
-  margin-left: 5px;
+  margin-left: 15px;
   font-size: 12px;
   color: #000;
   cursor: pointer;
@@ -371,7 +387,7 @@
 }
 
 #info-container {
-  margin: 20px 0 20px 22px;
+  margin: -30px 0 50px 22px;
   padding-left: 25px;
   padding-top: 10px;
   width: 300px;
@@ -429,7 +445,7 @@
   grid-template-columns: auto 1fr;
   gap: 10px;
   align-items: center;
-  margin: 20px 0 10px 22px;
+  margin: -35px 0 55px 22px;
 }
 
 .grocery-details,
@@ -438,10 +454,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.grocery-details .place-title{
-  display: flex;
 }
 
 h6 {
