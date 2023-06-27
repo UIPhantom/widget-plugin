@@ -54,24 +54,24 @@ box.forEach((boxes) => {
   });
 });
 
-const boxClickableElements = document.getElementsByClassName('box-clickable');
-for (let i = 0; i < boxClickableElements.length; i++) {
-  boxClickableElements[i].addEventListener('click', function () {
-    const travelMode = this.querySelector('i').textContent;
-    handleBoxClick(travelMode);
-  });
-}
+// const boxClickableElements = document.getElementsByClassName('box-clickable');
+// for (let i = 0; i < boxClickableElements.length; i++) {
+//   boxClickableElements[i].addEventListener('click', function () {
+//     const travelMode = this.querySelector('i').textContent;
+//     handleBoxClick(travelMode);
+//   });
+// }
 
-function getIconForMode(mode) {
-  if (mode === 'walking') {
-    return 'directions_walk';
-  } else if (mode === 'car') {
-    return 'directions_car';
-  } else if (mode === 'bicycle') {
-    return 'directions_bike';
-  } else if (mode === 'bus') {
-    return 'directions_bus';
-  } else {
-    return '';
-  }
-}
+// function getIconForMode(mode) {
+//   if (mode === 'walking') {
+//     return 'directions_walk';
+//   } else if (mode === 'car') {
+//     return 'directions_car';
+//   } else if (mode === 'bicycle') {
+//     return 'directions_bike';
+//   } else if (mode === 'bus') {
+//     return 'directions_bus';
+//   } else {
+//     return '';
+//   }
+// }
