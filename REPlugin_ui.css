@@ -149,7 +149,8 @@ body{
   border-radius: 4px;
 }
 .editor {
-  color: rgba(0, 0, 0, 0.5);
+  --text-color: rgba(0, 0, 0, 0.5);
+  color: var(--text-color);
   text-align: left;
   font: 400 14px "Avenir", "sans-serif";
 }

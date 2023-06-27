@@ -21,6 +21,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+//Editor text color
+const editor = document.querySelector('.editor');
+
+editor.addEventListener('input', function() {
+  if (editor.value.trim() !== '') {
+    editor.style.color = 'black'; /* Change the text color to black */
+  } else {
+    editor.style.color = 'rgba(0, 0, 0, 0.5)'; /* Set the text color back to light gray */
+  }
+});
+
 // Search
 $(document).ready(function () {
   $(".search-button").click(function () {
