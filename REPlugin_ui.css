@@ -315,7 +315,7 @@ body{
 
 /* Styling for the dynamically created div */
 .info-container {
-  margin: -25px 0 52px 22px;
+  margin: -27px 0 52px 22px;
   width: 300px;
   height: auto;
   display: flex;
